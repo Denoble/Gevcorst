@@ -1,0 +1,59 @@
+﻿@using Gevcorst.Domain.Entities
+@model IEnumerable<Beneficiary>
+@{
+    ViewBag.Title = "Beneficiaries";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var b in Model)
+{
+    <div style="width:inherit">
+        <span>
+            <img />
+        </span>
+        <span>
+            
+                <b>User Name:</b>
+
+                @b.FirstName
+            
+
+        </span>
+
+        <br />
+
+
+
+        <span>
+            <b>About yourself:</b>
+
+            @b.LastName
+
+        </span>
+
+        <br />
+
+
+
+        <span>
+            <b>My challenge:</b>
+
+            @b.Category
+
+        </span>
+
+        <br />
+
+        <a href="beneficiaryDetails.aspx?ID=<%#:Item.ID %>">
+            <span class="ProductListItem">
+             </span>
+        </a>
+
+
+
+    
+
+    </div>
+}

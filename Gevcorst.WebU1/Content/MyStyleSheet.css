@@ -1,0 +1,21 @@
+﻿body {
+}
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+.navbar-nav li a {
+ line-height: 50px;
+}
+.editor-lable>label
+{
+display:inline;
+float:left;
+width:150px;
+}
+
+.editor-field
+{
+ display:inline;
+width:50%;
+float:left;
+}

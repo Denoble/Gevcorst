@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Gevcorst.Domain.Tools.Gallery>
+@{
+    ViewBag.Title = "Home";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <title></title>
+  
+    <style>
+        .item {
+           
+            text-align: center;
+            height: 300px !important;
+            width:inherit
+        }
+
+        h2 {
+            margin: 0;
+            color: #888;
+            padding-top: 100px;
+            font-size: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+
+
+
+        <div>
+            <div id="DemoCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+                <!-- Carousel indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#DemoCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#DemoCarousel" data-slide-to="1"></li>
+                    <li data-target="#DemoCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                       
+                        <div class="carousel-caption">
+                            <h3>This is the First Label</h3>
+                            <p>
+                                
+
+                                <img src="~/Content/Images/20150723_105622.jpg"  class="carousel center-block "
+                                     style="width:initial;height:300px" />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">                        
+                     
+                        <div class="carousel-caption">
+                            
+                            <p>
+                                <img src="~/Content/Images/20150723_105641.jpg"
+                                     class="carousel center-block"
+                                     style="width:initial;height:300px" />
+                                </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        
+                        <div class="carousel-caption">
+                          
+                            <p>
+                                <img src="~/Content/Images/20150723_131029.jpg"
+                                     class="carousel center-block"
+                                     style="width:initial;height:300px" />
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Controls -->
+                <a class="carousel-control left" href="#DemoCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#DemoCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+               
+            </div>
+        </div>
+    
+        
+
+                    
+                                
+
+
+             
+
+
+
+
+
+
+</body>
+</html>
+
+
+    
+
+<p>
+    @Html.ActionLink("Add Image", "AddImage", "Home", new { id = "linkAddImage" }, null)
+</p>
+
+

@@ -1,0 +1,112 @@
+﻿@using Gevcorst.Domain.Entities;
+@using Gevcorst.Domain.Tools;
+@model Beneficiary
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Become a beneficiary</h2><br />
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("AddBeneficiary", "Beneficiary", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        { @Html.ValidationSummary("", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstName, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.FirstName, new { @class = "editor-field form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.LastName, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.UserName, new { @class = "editor-field form-control" })
+
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.Password, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.ConfirmPassword, new { @class = "editor-field form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.DOB, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.DOB, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Sex, new { @class = "col-md-2 control-label" })
+                @Html.DropDownListFor(m => m.Sex, new SelectList(Sex.gender))
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Category, new { @class = "col-md-2 control-label" })
+                @Html.DropDownListFor(m => m.Category, new SelectList(Categories.categories))
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.StreeAddress, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.StreeAddress, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.State, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.State, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.PostCode, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.PostCode, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Country, new { @class = "col-md-2 control-label" })
+                @Html.DropDownListFor(m => m.Country, new SelectList(Countries.sortAlp(Countries.countries)))
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.AboutYourSelf, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.AboutYourSelf, new { @class = "editor-field form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Challenge, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.Challenge, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.Email, new { @class = "editor-field form-control" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.MobileNumber, new { @class = "col-md-2 control-label" })
+                @Html.EditorFor(m => m.MobileNumber, new { @class = "editor-field form-control" })
+            </div>
+
+    <div class="form-group">
+        @Html.Label("Avatar", new { @class = "control-label col-md-2" })
+
+        <input type="file" id="Avatar" name="upload" class="" />
+
+    </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+
+
+
+
+        }
+
+    </div>
+</body>
+</html>

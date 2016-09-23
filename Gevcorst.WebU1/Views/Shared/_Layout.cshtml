@@ -1,0 +1,193 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="~/Content/MyStyleSheet.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker3.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    @System.Web.Optimization.Styles.Render("~/Content/css")
+    @System.Web.Optimization.Scripts.Render("~/bundles/gevcorstscripts")
+    @RenderSection("Styles",false)
+   @Styles.Render("~/Content/jqueryui")
+</head>
+<body>
+    <!-- Begin NavBar -->
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".menu2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <a href="@Url.Action("Index", "Home")"><img src="~/Content/Images/OurCompanyLogo.png" class="img-responsive img-thumbnail pull-left" /></a>
+            </div>
+
+
+            <div class="navbar-collapse collapse menu2">
+
+               
+                <ul class="nav navbar-nav ">
+                    <li>
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Shopping Malls <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Mall locations", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Packaging", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Weekly sales", "")
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Technology <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Mobile and Embedded software", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Robotics", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Data management", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Cloud solutions", "")
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Agriculture <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Plantations", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Storage and Processing", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Agricultural research", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Our produce", "")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Education<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Day care", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Pre primary", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Primary", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Secondary", "")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Health care<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Home care", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Hospitals", "")
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                @Html.ActionLink("Pharmaceuticals", "")
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Noble cause<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                @Html.ActionLink("Free skill donors", "")
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <hr>
+                <footer>
+
+                    <p>&copy; @DateTime.Now.Year Gevcorst</p>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+@Scripts.Render("~/bundles/jqueryui")
+
+@RenderSection("Scripts",required:false)
